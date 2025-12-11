@@ -33,14 +33,31 @@ A Python script that fetches NASA's EPIC (Earth Polychromatic Imaging Camera) im
 
 ## Usage
 
-Run the script with a specific date (YYYY-MM-DD):
+Run the script with optional arguments:
 ```bash
-python api_test.py
+python epic_wallpaper.py [--date YYYY-MM-DD] [--fps FPS] [--cache-dir DIR]
+```
+
+Options:
+- `--date`: Date in YYYY-MM-DD format (default: 2024-12-07)
+- `--fps`: Frames per second (default: 0.5)
+- `--cache-dir`: Cache directory (default: cache_nasa)
+
+Examples:
+```bash
+# Use default date with default settings
+python epic_wallpaper.py
+
+# Use a specific date
+python epic_wallpaper.py --date 2024-12-08
+
+# Custom FPS and cache directory
+python epic_wallpaper.py --date 2024-12-07 --fps 1.0 --cache-dir my_cache
 ```
 
 The script will:
-1. Fetch available images for the hardcoded date (currently 2024-12-07)
-2. Download them to the `cache_nasa/` directory
+1. Fetch available images for the specified date
+2. Download them to the cache directory
 3. Start animating the wallpaper in a loop
 
 Press Ctrl+C to stop the animation.
