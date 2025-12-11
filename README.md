@@ -1,3 +1,5 @@
+[Versão em Português](README-pt.md)
+
 # NASA Wallpaper Animator
 
 A Python script that fetches NASA's EPIC (Earth Polychromatic Imaging Camera) images for a specific date and animates them as a dynamic desktop wallpaper on Windows.
