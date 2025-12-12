@@ -33,14 +33,31 @@ Um script em Python que busca imagens da câmera EPIC (Earth Polychromatic Imagi
 
 ## Uso
 
-Execute o script com uma data específica (AAAA-MM-DD):
+Execute o script com argumentos opcionais:
 ```bash
-python api_test.py
+python epic_wallpaper.py [--date AAAA-MM-DD] [--fps FPS] [--cache-dir DIR]
+```
+
+Opções:
+- `--date`: Data no formato AAAA-MM-DD (padrão: 2024-12-07)
+- `--fps`: Quadros por segundo (padrão: 0.5)
+- `--cache-dir`: Diretório de cache (padrão: cache_nasa)
+
+Exemplos:
+```bash
+# Usar data padrão com configurações padrão
+python epic_wallpaper.py
+
+# Usar uma data específica
+python epic_wallpaper.py --date 2024-12-08
+
+# FPS personalizado e diretório de cache
+python epic_wallpaper.py --date 2024-12-07 --fps 1.0 --cache-dir meu_cache
 ```
 
 O script irá:
-1. Buscar imagens disponíveis para a data codificada (atualmente 2024-12-07)
-2. Baixar para o diretório `cache_nasa/`
+1. Buscar imagens disponíveis para a data especificada
+2. Baixar para o diretório de cache
 3. Iniciar a animação do papel de parede em loop
 
 Pressione Ctrl+C para parar a animação.
